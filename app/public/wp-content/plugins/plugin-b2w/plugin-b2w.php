@@ -194,7 +194,86 @@ final class B2W_Elementor_Extension {
     add_action('elementor/widgets/widgets_registered', [$this, 'init_widgets']);
  }
 
- /**
+/**
+ * Admin notice
+ *
+ * Warning when the site doesn't have Elementor installed or activated.
+ *
+ * @since 1.0.0
+ *
+ * @access public
+ */
+
+ public function admin_notice_missing_main_plugin() {
+
+    if (isset($_GET['activate'])) unset($_GET['activate']);
+
+    $message = sprintf(
+        /* translators: 1: Plugin name 2: Elementor */ 
+        esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'b2w-elementor-extension'),
+        '<strong>'. esc_html__('B2W Elementor Extension', 'b2w-elementor-extension') . '</strong>',
+        '<strong>'. esc_html__('Elementor', 'b2w-elementor-extension') . '</strong>',
+    );
+
+    printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+ }
+
+
+/**
+ * Admin notice
+ *
+ * Warning when the site doesn't have a minimum required Elementor version.
+ *
+ * @since 1.0.0
+ *
+ * @access public
+ */
+
+public function admin_notice_minimum_elementor_version() {
+
+    if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+ 
+   $message = sprintf(
+      /* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
+      esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'b2w-elementor-extension' ),
+      '<strong>' . esc_html__( 'B2W Elementor Extension', 'b2w-elementor-extension' ) . '</strong>',
+      '<strong>' . esc_html__( 'Elementor', 'b2w-elementor-extension' ) . '</strong>',
+       self::MINIMUM_ELEMENTOR_VERSION
+    );
+ 
+    printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+ 
+  }
+
+
+/**
+  * Admin notice
+  *
+  * Warning when the site doesn't have a minimum required PHP version.
+  *
+  * @since 1.0.0
+  *
+  * @access public
+  */
+
+  public function admin_notice_minimum_php_version() {
+
+    if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+
+    $message = sprintf(
+			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'b2w-elementor-extension' ),
+			'<strong>' . esc_html__( 'B2W Elementor Extension', 'b2w-elementor-extension' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'b2w-elementor-extension' ) . '</strong>',
+			 self::MINIMUM_PHP_VERSION
+		);
+
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+
+  }
+
+
+/**
  * Adding a custom category
  */
 
@@ -207,4 +286,26 @@ final class B2W_Elementor_Extension {
         ]
         );
  }
+
+/**
+ * Init Widgets
+ *
+ * Include widgets files and register them
+ *
+ * @since 1.0.0
+ *
+ * @access public
+ */
+
+public function init_widgets() {
+    // Include Widget Files
+
+  require_once(__DIR__ . '/widgets/class-buttons.php');
+  require_once(__DIR__ . '/widgets/class-title.php');
+  require_once(__DIR__ . '/widgets/class-color-link.php');
+  require_once(__DIR__ . '/widgets/class-info-text-card.php');
+  require_once(__DIR__ . '/widgets/class-cta.php');
 }
+
+}
+B2W_Elementor_Extension::instance();
