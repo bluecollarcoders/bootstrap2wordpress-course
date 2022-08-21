@@ -111,3 +111,38 @@ Stack trace:
 #3 C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php(307): Kirki\Field->add_setting(Object(WP_Customize_Manager))
 #4 C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_ in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\kirki\packages\kirki-framework\module-selective-refresh\src\Selective_Refresh.php on line 60
 [21-Aug-2022 09:21:50 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\plugin-b2w.php on line 215
+[21-Aug-2022 11:35:05 UTC] PHP Warning:  _() expects exactly 1 parameter, 2 given in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\plugin-b2w.php on line 284
+[21-Aug-2022 11:35:05 UTC] PHP Stack trace:
+[21-Aug-2022 11:35:05 UTC] PHP   1. {main}() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\post.php:0
+[21-Aug-2022 11:35:05 UTC] PHP   2. require_once() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\post.php:12
+[21-Aug-2022 11:35:05 UTC] PHP   3. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\admin.php:419
+[21-Aug-2022 11:35:05 UTC] PHP   4. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[21-Aug-2022 11:35:05 UTC] PHP   5. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[21-Aug-2022 11:35:05 UTC] PHP   6. Elementor\Core\Editor\Editor->init() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[21-Aug-2022 11:35:05 UTC] PHP   7. Elementor\Core\Editor\Editor->print_editor_template() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:163
+[21-Aug-2022 11:35:05 UTC] PHP   8. include() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:322
+[21-Aug-2022 11:35:05 UTC] PHP   9. wp_head() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\editor-templates\editor-wrapper.php:31
+[21-Aug-2022 11:35:05 UTC] PHP  10. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\general-template.php:3042
+[21-Aug-2022 11:35:05 UTC] PHP  11. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[21-Aug-2022 11:35:05 UTC] PHP  12. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[21-Aug-2022 11:35:05 UTC] PHP  13. wp_enqueue_scripts() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[21-Aug-2022 11:35:05 UTC] PHP  14. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\script-loader.php:2156
+[21-Aug-2022 11:35:05 UTC] PHP  15. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[21-Aug-2022 11:35:05 UTC] PHP  16. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[21-Aug-2022 11:35:05 UTC] PHP  17. Elementor\Core\Editor\Editor->enqueue_scripts() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[21-Aug-2022 11:35:05 UTC] PHP  18. Elementor\Core\DocumentTypes\Page->get_config() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:527
+[21-Aug-2022 11:35:05 UTC] PHP  19. Elementor\Core\DocumentTypes\Page->get_initial_config() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\controls-stack.php:1019
+[21-Aug-2022 11:35:05 UTC] PHP  20. Elementor\Core\Base\Document::get_editor_panel_config() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\base\document.php:591
+[21-Aug-2022 11:35:05 UTC] PHP  21. Elementor\Core\DocumentTypes\PageBase::get_editor_panel_categories() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\base\document.php:142
+[21-Aug-2022 11:35:05 UTC] PHP  22. Elementor\Core\Base\Document::get_editor_panel_categories() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\document-types\page-base.php:37
+[21-Aug-2022 11:35:05 UTC] PHP  23. Elementor\Elements_Manager->get_categories() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\base\document.php:102
+[21-Aug-2022 11:35:05 UTC] PHP  24. Elementor\Elements_Manager->init_categories() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\managers\elements.php:109
+[21-Aug-2022 11:35:05 UTC] PHP  25. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\managers\elements.php:330
+[21-Aug-2022 11:35:05 UTC] PHP  26. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[21-Aug-2022 11:35:05 UTC] PHP  27. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[21-Aug-2022 11:35:05 UTC] PHP  28. B2W_Elementor_Extension->add_elementor_widget_categories() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[21-Aug-2022 11:35:05 UTC] PHP  29. _() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\plugin-b2w.php:284
+[21-Aug-2022 11:35:05 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-buttons.php on line 23
+[21-Aug-2022 11:37:11 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-buttons.php on line 23
+[21-Aug-2022 11:37:56 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-buttons.php on line 56
+[21-Aug-2022 11:39:35 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-buttons.php on line 56

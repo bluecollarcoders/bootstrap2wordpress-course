@@ -277,15 +277,17 @@ public function admin_notice_minimum_elementor_version() {
  * Adding a custom category
  */
 
- public function add_elementor_widget_categories($elements_manager) {
+public function add_elementor_widget_categories($elements_manager) {
+
     $elements_manager->add_category (
-        'b2w_category',
-        [
-            'title' => _('Bootstrap to WordPress', 'plugin-b2w'),
-            'icon' => 'eicon-nerd',
-        ]
-        );
- }
+      'b2w_category',
+      [
+        'title' => __('Bootstrap to WordPress','plugin-b2w'),
+        'icon' => 'eicon-nerd',
+      ]
+    );
+ 
+  }
 
 /**
  * Init Widgets
