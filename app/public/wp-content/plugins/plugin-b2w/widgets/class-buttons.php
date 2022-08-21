@@ -70,19 +70,60 @@ class B2w_Buttons_Widget extends \Elementor\Widget_Base {
             [
               'label' => __('Button Style', 'plugin-b2w'),
               'type' => \Elementor\Controls_Manager::SELECT,
+              'label_block' => true,
               'default' => 'btn-primary',
               'options' => [
-                
+                'btn-primary' => __( 'Primary', 'plugin-b2w'),
+                'btn-secondary' => __( 'Secondary', 'plugin-b2w'),
+                'btn-invert' => __( 'Invert', 'plugin-b2w'),
               ]
             ],
             );
         
+        
+        $this->add_control(
+            'button_align',
+            [
+                'label' => __( 'Alignment', 'plugin-b2w'),
+                'type' => \Elementor\Controls_Manager::CHOOSE,
+                'options' => [
+                   
+                    'text-start' => [
+                        'title' => __( 'Left', 'plugin-b2w'),
+                         'icon' => 'eicon-text-align-left',
+                    ],
 
+                    'text-center' => [
+                        'title' => __( 'Center', 'plugin-b2w'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+
+                    'text-end' => [
+                        'title' => __( 'Right', 'plugin-b2w'),
+                        'icon' => 'eicon-text-align-right',
+                    ]
+                ],
+
+                'default' => 'text-start',
+                'toogle' => true,
+            ],
+            );
 
 
         $this->end_controls_section();
     
     
+    }
+    
+    
+    protected function render() {
+      
+        $settings = $this->get_settings_for_display();
+        $target = $settings['button_link']['is_external'] ? 'target="blank"' : '';
+        $nofollow = $settings['button_link'] ['nofollow'] ? 'rel="nofollw"' : '';
+
+        echo '<div class="link-box ">';
+
     }
 
 
@@ -93,9 +134,7 @@ class B2w_Buttons_Widget extends \Elementor\Widget_Base {
 
 	
 
-	protected function render() {}
-
-	protected function content_template() {}
+	
 
 }
 
