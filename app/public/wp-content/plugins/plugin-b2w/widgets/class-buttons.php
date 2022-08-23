@@ -122,7 +122,9 @@ class B2w_Buttons_Widget extends \Elementor\Widget_Base {
         $target = $settings['button_link']['is_external'] ? 'target="blank"' : '';
         $nofollow = $settings['button_link'] ['nofollow'] ? 'rel="nofollw"' : '';
 
-        echo '<div class="link-box ">';
+        echo '<div class="link-box">';
+        echo '<a href=" ' . $settings['button-link']['url'] . '" '. $target . $nofollow . ' class="btn ' . $settings['button_style'] . '">' . $settings['button_text'] .' </a>';
+        echo '</div>';
 
     }
 
