@@ -119,13 +119,12 @@ class B2w_Buttons_Widget extends \Elementor\Widget_Base {
     protected function render() {
       
         $settings = $this->get_settings_for_display();
-        $target = $settings['button_link']['is_external'] ? 'target="blank"' : '';
-        $nofollow = $settings['button_link'] ['nofollow'] ? 'rel="nofollw"' : '';
+    $target = $settings['button_link']['is_external'] ? ' target="_blank"' : '';
+    $nofollow = $settings['button_link']['nofollow'] ? ' rel="nofollow"' : '';
 
-        echo '<div class="link-box">';
-        echo '<a href=" ' . $settings['button-link']['url'] . '" '. $target . $nofollow . ' class="btn ' . $settings['button_style'] . '">' . $settings['button_text'] .' </a>';
-        echo '</div>';
-
+    echo '<div class="link-box ' . $settings['button_align'] . ' ">';
+    echo '<a href="' . $settings['button_link']['url'] . '" ' . $target . $nofollow . ' class="btn ' . $settings['button_style'] . '">' . $settings['button_text'] . '</a>';
+    echo '</div>';
     }
 
 
