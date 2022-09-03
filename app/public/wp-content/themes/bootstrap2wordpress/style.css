@@ -41,6 +41,10 @@ p {
   font-weight: 400;
 }
 
+.elementor-widget-text-editor p {
+  color: inherit;
+}
+
 em {
   color: #828282;
 }
