@@ -130,13 +130,6 @@ class B2w_Buttons_Widget extends \Elementor\Widget_Base {
 
 	public function get_custom_help_url() {}
 
-
-
-
-	
-
-	
-
 }
 
 \Elementor\Plugin::instance()->widgets_manager->register( new \B2w_Buttons_Widget());
