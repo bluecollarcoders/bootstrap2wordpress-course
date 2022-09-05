@@ -85,7 +85,7 @@ class B2W_Section_Tilte_Widget extends \Elementor\Widget_Base {
                 );
 
             $this->add_control(
-                'title-align',
+                'title_align',
                 [
                     'label' => __( 'Alignment', 'plugin-b2w'),
                     'type' => \Elementor\Controls_Manager::CHOOSE,

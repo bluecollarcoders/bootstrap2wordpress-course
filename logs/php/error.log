@@ -146,3 +146,75 @@ Stack trace:
 [21-Aug-2022 11:37:11 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-buttons.php on line 23
 [21-Aug-2022 11:37:56 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-buttons.php on line 56
 [21-Aug-2022 11:39:35 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-buttons.php on line 56
+[04-Sep-2022 22:50:08 UTC] PHP Warning:  require_once(C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w/widgets/class-color-link.php): failed to open stream: No such file or directory in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\plugin-b2w.php on line 307
+[04-Sep-2022 22:50:08 UTC] PHP Stack trace:
+[04-Sep-2022 22:50:08 UTC] PHP   1. {main}() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\post.php:0
+[04-Sep-2022 22:50:08 UTC] PHP   2. require_once() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\post.php:12
+[04-Sep-2022 22:50:08 UTC] PHP   3. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\admin.php:419
+[04-Sep-2022 22:50:08 UTC] PHP   4. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[04-Sep-2022 22:50:08 UTC] PHP   5. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP   6. Elementor\Core\Editor\Editor->init() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[04-Sep-2022 22:50:08 UTC] PHP   7. Elementor\Core\Editor\Editor->print_editor_template() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:163
+[04-Sep-2022 22:50:08 UTC] PHP   8. include() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:322
+[04-Sep-2022 22:50:08 UTC] PHP   9. wp_head() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\editor-templates\editor-wrapper.php:31
+[04-Sep-2022 22:50:08 UTC] PHP  10. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\general-template.php:3042
+[04-Sep-2022 22:50:08 UTC] PHP  11. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[04-Sep-2022 22:50:08 UTC] PHP  12. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  13. wp_enqueue_scripts() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[04-Sep-2022 22:50:08 UTC] PHP  14. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\script-loader.php:2156
+[04-Sep-2022 22:50:08 UTC] PHP  15. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[04-Sep-2022 22:50:08 UTC] PHP  16. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  17. Elementor\Core\Editor\Editor->enqueue_scripts() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[04-Sep-2022 22:50:08 UTC] PHP  18. Elementor\Core\DocumentTypes\Page->get_config() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:527
+[04-Sep-2022 22:50:08 UTC] PHP  19. Elementor\Core\DocumentTypes\Page->get_initial_config() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\controls-stack.php:1019
+[04-Sep-2022 22:50:08 UTC] PHP  20. Elementor\Core\DocumentTypes\Page->get_elements_raw_data() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\base\document.php:623
+[04-Sep-2022 22:50:08 UTC] PHP  21. Elementor\Element_Section->get_raw_data() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\base\document.php:949
+[04-Sep-2022 22:50:08 UTC] PHP  22. Elementor\Element_Column->get_raw_data() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:534
+[04-Sep-2022 22:50:08 UTC] PHP  23. Elementor\Element_Column->get_children() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:533
+[04-Sep-2022 22:50:08 UTC] PHP  24. Elementor\Element_Column->init_children() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:298
+[04-Sep-2022 22:50:08 UTC] PHP  25. Elementor\Element_Column->add_child() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:892
+[04-Sep-2022 22:50:08 UTC] PHP  26. Elementor\Element_Column->get_child_type() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:338
+[04-Sep-2022 22:50:08 UTC] PHP  27. Elementor\Element_Column->_get_default_child_type() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:847
+[04-Sep-2022 22:50:08 UTC] PHP  28. Elementor\Widgets_Manager->get_widget_types() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\elements\column.php:1044
+[04-Sep-2022 22:50:08 UTC] PHP  29. Elementor\Widgets_Manager->init_widgets() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\managers\widgets.php:310
+[04-Sep-2022 22:50:08 UTC] PHP  30. Elementor\Modules\DevTools\Deprecation->do_deprecated_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\managers\widgets.php:107
+[04-Sep-2022 22:50:08 UTC] PHP  31. do_action_ref_array() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\modules\dev-tools\deprecation.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  32. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:524
+[04-Sep-2022 22:50:08 UTC] PHP  33. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  34. B2W_Elementor_Extension->init_widgets() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[04-Sep-2022 22:50:08 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w/widgets/class-color-link.php' (include_path='C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\kirki/;C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\kirki/core;.:/usr/share/php:/www/wp-content/pear') in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\plugin-b2w.php on line 307
+[04-Sep-2022 22:50:08 UTC] PHP Stack trace:
+[04-Sep-2022 22:50:08 UTC] PHP   1. {main}() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\post.php:0
+[04-Sep-2022 22:50:08 UTC] PHP   2. require_once() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\post.php:12
+[04-Sep-2022 22:50:08 UTC] PHP   3. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-admin\admin.php:419
+[04-Sep-2022 22:50:08 UTC] PHP   4. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[04-Sep-2022 22:50:08 UTC] PHP   5. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP   6. Elementor\Core\Editor\Editor->init() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[04-Sep-2022 22:50:08 UTC] PHP   7. Elementor\Core\Editor\Editor->print_editor_template() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:163
+[04-Sep-2022 22:50:08 UTC] PHP   8. include() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:322
+[04-Sep-2022 22:50:08 UTC] PHP   9. wp_head() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\editor-templates\editor-wrapper.php:31
+[04-Sep-2022 22:50:08 UTC] PHP  10. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\general-template.php:3042
+[04-Sep-2022 22:50:08 UTC] PHP  11. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[04-Sep-2022 22:50:08 UTC] PHP  12. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  13. wp_enqueue_scripts() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[04-Sep-2022 22:50:08 UTC] PHP  14. do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\script-loader.php:2156
+[04-Sep-2022 22:50:08 UTC] PHP  15. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:476
+[04-Sep-2022 22:50:08 UTC] PHP  16. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  17. Elementor\Core\Editor\Editor->enqueue_scripts() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[04-Sep-2022 22:50:08 UTC] PHP  18. Elementor\Core\DocumentTypes\Page->get_config() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\editor\editor.php:527
+[04-Sep-2022 22:50:08 UTC] PHP  19. Elementor\Core\DocumentTypes\Page->get_initial_config() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\controls-stack.php:1019
+[04-Sep-2022 22:50:08 UTC] PHP  20. Elementor\Core\DocumentTypes\Page->get_elements_raw_data() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\base\document.php:623
+[04-Sep-2022 22:50:08 UTC] PHP  21. Elementor\Element_Section->get_raw_data() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\core\base\document.php:949
+[04-Sep-2022 22:50:08 UTC] PHP  22. Elementor\Element_Column->get_raw_data() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:534
+[04-Sep-2022 22:50:08 UTC] PHP  23. Elementor\Element_Column->get_children() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:533
+[04-Sep-2022 22:50:08 UTC] PHP  24. Elementor\Element_Column->init_children() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:298
+[04-Sep-2022 22:50:08 UTC] PHP  25. Elementor\Element_Column->add_child() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:892
+[04-Sep-2022 22:50:08 UTC] PHP  26. Elementor\Element_Column->get_child_type() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:338
+[04-Sep-2022 22:50:08 UTC] PHP  27. Elementor\Element_Column->_get_default_child_type() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\base\element-base.php:847
+[04-Sep-2022 22:50:08 UTC] PHP  28. Elementor\Widgets_Manager->get_widget_types() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\elements\column.php:1044
+[04-Sep-2022 22:50:08 UTC] PHP  29. Elementor\Widgets_Manager->init_widgets() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\managers\widgets.php:310
+[04-Sep-2022 22:50:08 UTC] PHP  30. Elementor\Modules\DevTools\Deprecation->do_deprecated_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\includes\managers\widgets.php:107
+[04-Sep-2022 22:50:08 UTC] PHP  31. do_action_ref_array() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\elementor\modules\dev-tools\deprecation.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  32. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:524
+[04-Sep-2022 22:50:08 UTC] PHP  33. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
+[04-Sep-2022 22:50:08 UTC] PHP  34. B2W_Elementor_Extension->init_widgets() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
