@@ -218,3 +218,4 @@ Stack trace:
 [04-Sep-2022 22:50:08 UTC] PHP  32. WP_Hook->do_action() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\plugin.php:524
 [04-Sep-2022 22:50:08 UTC] PHP  33. WP_Hook->apply_filters() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:331
 [04-Sep-2022 22:50:08 UTC] PHP  34. B2W_Elementor_Extension->init_widgets() C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-includes\class-wp-hook.php:307
+[05-Sep-2022 21:32:42 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM), expecting identifier (T_STRING) in C:\Users\matte\Local Sites\bootstrap2wordpress\app\public\wp-content\plugins\plugin-b2w\widgets\class-info-text-card.php on line 40
