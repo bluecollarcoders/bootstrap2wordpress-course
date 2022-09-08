@@ -68,7 +68,7 @@ class B2W_Info_Text_Card_Widget extends \Elementor\Widget_Base {
                 'label' => __('Choose Image', 'plugin-b2w'),
                 'type' => \Elementor\Controls_Manager::MEDIA,
                 'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src()
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
 
                 ],
             ]
@@ -80,7 +80,7 @@ class B2W_Info_Text_Card_Widget extends \Elementor\Widget_Base {
                 'name' => 'background',
                 'label' => __( 'Background', 'plugin-b2w'),
                 'types' => [ 'classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .overlay',
+                'selector' => '{{WRAPPER}} .text-card',
             ]
         );
 
@@ -96,7 +96,7 @@ class B2W_Info_Text_Card_Widget extends \Elementor\Widget_Base {
         echo '<div class="overlay"></div>';
         echo '<h4>'.$settings['info_title_text'] .'</h4>';
         echo '<p>'.$settings['info_desc'].'</p>';
-        echo '<div class="overlay-image">img src="'.esc_url($settings['card_image']['url']).'"</div>';
+        echo '<div class="overlay-image"><img src="'.esc_url($settings['card_image']['url']).'"></div>';
         echo '</div>';
         }
 }
