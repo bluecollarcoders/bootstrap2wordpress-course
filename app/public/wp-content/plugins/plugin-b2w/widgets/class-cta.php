@@ -54,6 +54,18 @@ class B2W_Call_To_Action_Widget extends \Elementor\Widget_Base {
             );
 
         $this->add_control(
+			'sub_title_color',
+      [
+        'label' => __( 'Sub Title Color', 'plugin-b2w' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ffffff',
+        'selectors' => [
+          '{{WRAPPER}} .sub-title' => 'color: {{VALUE}}',
+        ],
+      ]
+    );
+
+        $this->add_control(
             'title_color',
             [
                 'label' => __('Title Colour', 'plugin-b2w'),
@@ -64,6 +76,40 @@ class B2W_Call_To_Action_Widget extends \Elementor\Widget_Base {
                 ],
             ]
             );
+
+        $this->add_control(
+            'title_text',
+            [
+                'label' => __('Title Text', 'plugin-b2w'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'placeholder' => __('CTA Title', 'plugin-b2w'),
+                'default' => __('Bootstrap to WordPress with Brad Hussey', 'plugin-b2w'),
+            ]
+            );
+
+            $this->add_control(
+                'cta_desc',
+                [
+            'label' => __('Description', 'plugin-b2w'),
+                    'label_block' => true,
+                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    'placeholder' => __('Description', 'plugin-b2w' ),
+                    'default' => __( 'Learn how to design and build custom, beautiful & responsive WordPress websites and themes for beginners TODAY!', 'plugin-b2w' ),
+          ]
+        );
+    
+        $this->add_control(
+          'desc_color',
+          [
+            'label' => __( 'Description Colour', 'plugin-b2w' ),
+                    'type' => \Elementor\Controls_Manager::COLOR,
+                    'default' => '#ffffff',
+            'selectors' => [
+                        '{{WRAPPER}} .cta-desc' => 'color: {{VALUE}}',
+                    ],
+          ]
+        );
 
         $this->add_control(
             'overlay_image',
@@ -81,10 +127,8 @@ class B2W_Call_To_Action_Widget extends \Elementor\Widget_Base {
             [
                 'label' => __('Button Text', 'plugin-b2w'),
                 'label_block' => true,
-                'type' => \Elementor\Controls_Manager::MEDIA,
-                'default' => [
-                    'url' => $plugin_images . '/card-css.png',
-                ],
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __('Join Now ->', 'plugin-b2w'),
             ]
         );
 
@@ -103,6 +147,20 @@ class B2W_Call_To_Action_Widget extends \Elementor\Widget_Base {
             );
 
         $this->add_control(
+            'btn_style',
+            [
+                'label' => __('Button Style', 'plugin-b2w'),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'btn-primary',
+                'options' => [
+                    'btn-primary' => __('Primary', 'plugin-b2w'),
+                    'btn-secondary' => __('Secondary', 'plugin-b2w'),
+                    'btn-invert' => __('Invert', 'plugin-b2w'),
+                ],
+            ]
+                );
+
+        $this->add_responsive_control(
             'btn_align',
             [
                 'label' => __('Alignment', 'plugin-b2w'),
@@ -121,6 +179,8 @@ class B2W_Call_To_Action_Widget extends \Elementor\Widget_Base {
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
+
+                'devices' => ['desktop', 'tablet', 'mobile'],
                 'default' => 'text-center',
                 'toggle' => true,
             ]
@@ -133,12 +193,36 @@ class B2W_Call_To_Action_Widget extends \Elementor\Widget_Base {
                 'name' => 'background',
                 'label' => __('Background', 'plugin-b2w'),
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .overlay',
+                'selector' => '{{WRAPPER}} .section-call-to-action',
             ]
         );
 
         $this->end_controls_section();
     }
+
+    protected function render() {
+        global $plugin_images;
+        $settings = $this->get_settings_for_display();
+        $target = $settings['button_link']['is_external'] ? ' target="_blank"' : '';
+        $nofollow = $settings['button_link']['nofollow'] ? ' rel="nofollow"' : '';
+    
+      echo '<div class="section-call-to-action">';
+    
+        echo '<div class="overlay">';
+          echo '<div class="overlay-image"><img src="'. esc_url( $settings['overlay_image']['url'] ) .'"></div>';
+        echo '</div>';
+    
+        echo '<div class="underlay-bg"></div>';
+    
+        echo '<p class="sub-title">'. $settings['sub_title_text'] .'</p>';
+        echo '<h2>'. $settings['title_text'] .'</h2>';
+        echo '<p class="cta-desc">'. $settings['cta_desc'] .'</p>';
+        echo '<div class="link-box '. $settings['btn_align'] .'">';
+          echo '<a href="'. $settings['button_link']['url'] .'" ' . $target . $nofollow . ' class="btn '. $settings['btn_style'] .'">'.$settings['button_text'].'</a>';
+        echo '</div>';
+      echo '</div>';
+    
+      }
 
 }
 
